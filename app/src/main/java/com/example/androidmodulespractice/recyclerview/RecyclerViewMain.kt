@@ -6,18 +6,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidmodulespractice.R
-import com.example.androidmodulespractice.databinding.ActivityMainBinding
+import com.example.androidmodulespractice.databinding.ActivityRecyclerViewMainBinding
 import com.example.androidmodulespractice.recyclerview.adapter.MovieAdapter
 import com.example.androidmodulespractice.recyclerview.model.MovieModel
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class RecyclerViewMain : AppCompatActivity() {
+    private lateinit var binding: ActivityRecyclerViewMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityRecyclerViewMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        topBar()
         movieModelAdapter()
+    }
+
+    private fun topBar() {
+        binding.topBar.topBarApp.setTitle("Movie App")
     }
 
     private fun movieModelAdapter() {

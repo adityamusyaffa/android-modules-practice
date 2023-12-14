@@ -13,7 +13,10 @@
         android:theme="@style/Theme.AndroidModulesPractice"
         tools:targetApi="31">
         <activity
-            android:name=".recyclerview.MainActivity"
+            android:name=".topbar.TopBarMain"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.RecyclerViewMain"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
